@@ -27,7 +27,7 @@ a {
     position: relative;
     overflow: hidden;
     max-width: 100%;
-    margin-left: 110px;
+    margin-left: 85px;
     margin-right: auto;
 }
 
@@ -36,9 +36,8 @@ a {
 .slider__wrapper {
     position: relative;
     overflow: hidden;
-    margin-left: auto;
+    margin-left: 50px;
     margin-right: auto;
-    padding-left: 50px;
 }
 
 /* стили для контейнера слайдов */
@@ -57,11 +56,23 @@ a {
     flex: 1 0 100%;
 }
 
-.slide-1 {
-    background-image: url(../img/slider-home-bg1.jpg);
+.slide-1, .slide-2, .slide-3, .slide-4 {
+    background-image: url(/img/slider-home-bg1.jpg);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 40% 100%;
+}
+
+.slide-2 {
+    background-image: url(/img/slider-home-bg2.jpg);
+}
+
+.slide-3 {
+    background-image: url(/img/slider-home-bg3.jpg);
+}
+
+.slide-4 {
+    background-image: url(/img/slider-home-bg4.jpg);
 }
 
 .slider__item {
@@ -185,7 +196,7 @@ a {
     font-weight: 400;
 }
 
-.slider__image, .about__image {
+.slider__image img, .about__image img{
     padding: 0 15px;
 }
 
@@ -209,6 +220,18 @@ a {
     margin: 30px;
 }
 
+.slide-2 .slider__btn {
+    background-color: #0B3D80;
+}
+
+.slide-3 .slider__btn {
+    background-color: #EB5757;
+}
+
+.slide-4 .slider__btn {
+    background-color: #9B51E0;
+}
+
 .navigation {
     display: flex;
 }
@@ -229,6 +252,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+}
+
+.navigation__list span {
+    display: none;
 }
 
 .navigation__list li, .navigation__social {
@@ -262,7 +289,7 @@ a {
     display: flex;
     height: 100vh;
     margin-left: 140px;
-    background-image: url(../img/333.png);
+    background-image: url(/img/333.png);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 40% 100%;
@@ -303,7 +330,7 @@ a {
 }
 
 .services {
-    background-image: url(../img/services-bg.jpg);
+    background-image: url(/img/services-bg.jpg);
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 40% 100%;
@@ -311,7 +338,7 @@ a {
 }
 
 .portfolio {
-    background-image: url(../img/Group\ 36.jpg);
+    background-image: url(/img/Group\ 36.jpg);
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 40% 100%;
@@ -412,7 +439,7 @@ a {
     background-position: center right;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../img/contacts-bg.jpg);
+    background-image: url(/img/contacts-bg.jpg);
     background-size: 40% 100%;
     flex-wrap: wrap;
 }
@@ -443,7 +470,7 @@ a {
 .contacts__form form {
     display: flex;
     flex-direction: column;
-    flex: 1 0 100%;
+    flex: 1 1 100%;
 }
 
 .contacts__form input, .contacts__form textarea {
@@ -507,14 +534,79 @@ a {
 
 @media (max-width: 470px) {
     .navigation-left {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
         height: 80px;
-        align-items: flex-start;
-        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .navigation__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .navigation__burger span {
+        background-color: #4C536A;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .navigation__burger:before, .navigation__burger:after {
+        content: '';
+        background-color: #4C536A;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .navigation__burger:before {
+        top: 0;
+    }
+    .navigation__burger:after {
+        bottom: 0;
+    }
+    .navigation__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .navigation__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .navigation__burger.active span {
+        transform: scale(0);
     }
     .navigation__list {
+        height: 0;
+        width: 100%;
+        background-color: #F0F0F0;
+        transition: all 0.3s ease 0s;
+    }
+    .navigation__list.active {
+        display: flex;
+        height: auto;
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .navigation__list li {
+        transform: scale(0);
+    }
+    .navigation__list.active li {
+        transform: scale(1);
+    }
+    .navigation__list span {
+        display: block;
+    }
+    .navigation__list i {
         display: none;
     }
     .navigation__social {
