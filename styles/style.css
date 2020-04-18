@@ -424,12 +424,13 @@ a {
     height: 150px;
 }
 
-.services__info, .portfolio__info{
+.services__info, .portfolio__info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
+    min-height: 20vh;
 }
 
 .portfolio__title, .services__title {
@@ -437,11 +438,11 @@ a {
     text-align: center;
 }
 
-.services__sale{
+.services__sale {
     color: #4C536A;
     font-weight: 500;
     padding: 0px 15px 15px 15px;
-} 
+}
 
 .portfolio__text, .services__text {
     color: #A2A2A2;
