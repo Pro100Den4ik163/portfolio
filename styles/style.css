@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    box-sizing: border-box;
+}
+
 .slider {
     position: relative;
     overflow: hidden;
@@ -196,7 +200,7 @@ a {
     font-weight: 400;
 }
 
-.slider__image img, .about__image img{
+.slider__image img, .about__image img {
     padding: 0 15px;
 }
 
@@ -220,16 +224,44 @@ a {
     margin: 30px;
 }
 
+.slide-1 .slider__btn:hover {
+    background-color: #fff;
+    color: #4C536A;
+    border: 1px solid #4C536A;
+    padding: 18px 50px;
+}
+
 .slide-2 .slider__btn {
     background-color: #0B3D80;
+}
+
+.slide-2 .slider__btn:hover {
+    background-color: #fff;
+    color: #0B3D80;
+    border: 1px solid #0B3D80;
+    padding: 18px 50px;
 }
 
 .slide-3 .slider__btn {
     background-color: #EB5757;
 }
 
+.slide-3 .slider__btn:hover {
+    background-color: #fff;
+    color: #EB5757;
+    border: 1px solid #EB5757;
+    padding: 18px 50px;
+}
+
 .slide-4 .slider__btn {
     background-color: #9B51E0;
+}
+
+.slide-4 .slider__btn:hover {
+    background-color: #fff;
+    color: #9B51E0;
+    border: 1px solid #9B51E0;
+    padding: 18px 50px;
 }
 
 .navigation {
@@ -252,6 +284,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    overflow: auto;
 }
 
 .navigation__list span {
@@ -306,6 +339,13 @@ a {
     background-color: #27AE60;
     color: #F8F8F8;
     margin: 30px;
+}
+
+.about__btn:hover {
+    background-color: #fff;
+    color: #27AE60;
+    border: 1px solid #27AE60;
+    padding: 18px 50px;
 }
 
 .btn {
@@ -398,9 +438,23 @@ a {
     color: #F8F8F8;
 }
 
+.portfolio__btn:hover {
+    background-color: #fff;
+    color: #FAB456;
+    border: 1px solid #FAB456;
+    padding: 18px 50px;
+}
+
 .services__btn {
     background-color: #2881B4;
     color: #F8F8F8;
+}
+
+.services__btn:hover {
+    background-color: #fff;
+    color: #2881B4;
+    border: 1px solid #2881B4;
+    padding: 18px 50px;
 }
 
 .services__header, .portfolio__header {
@@ -487,6 +541,13 @@ a {
     align-self: center;
 }
 
+.contacts__btn:hover {
+    background-color: #fff;
+    color: #D9DD25;
+    border: 1px solid #D9DD25;
+    padding: 18px 50px;
+}
+
 .footer {
     display: flex;
     bottom: 0;
@@ -533,6 +594,12 @@ a {
 }
 
 @media (max-width: 470px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .logo {
+        margin-left: 15px;
+    }
     .navigation-left {
         flex-direction: row;
         justify-content: space-between;
@@ -549,6 +616,7 @@ a {
         position: relative;
         width: 30px;
         height: 20px;
+        margin-right: 15px;
     }
     .navigation__burger span {
         background-color: #4C536A;
@@ -609,6 +677,9 @@ a {
     .navigation__list i {
         display: none;
     }
+    .navigation__list li a:hover {
+        background-color: transparent;
+    }
     .navigation__social {
         display: none;
     }
@@ -625,5 +696,6 @@ a {
     .contacts__form {
         flex: 1 1 100%;
         margin: 15px;
+        padding: 15px;
     }
 }
