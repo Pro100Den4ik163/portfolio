@@ -406,7 +406,6 @@ a {
     flex: 0 1 30%;
     align-items: center;
     justify-content: flex-start;
-    min-height: 65vh;
 }
 
 .portfolio__image, .services__image {
@@ -430,7 +429,7 @@ a {
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
-    min-height: 20vh;
+    min-height: 25vh;
 }
 
 .portfolio__title, .services__title {
