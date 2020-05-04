@@ -331,6 +331,10 @@ a {
     flex: 1 0 100%;
     max-width: 100%;
 }
+.about__image img{
+    height: auto;
+    width: 100%;
+}
 
 .about__text {}
 
@@ -598,6 +602,9 @@ a {
     }
     .slider__item {
         flex-direction: column-reverse;
+    }
+    .services__info, .portfolio__info {
+        min-height: auto;
     }
 }
 
